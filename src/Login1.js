@@ -15,6 +15,7 @@ function Login1() {
        e.preventDefault()
        if(username === oldUsername && pass === oldPassword){
          toast.success("Login Successful")
+         
         setTimeout(() => {
            window.location.href ="./Dashboard"
          }, 3000)

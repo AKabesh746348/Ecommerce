@@ -14,6 +14,8 @@ function Login() {
     slidesToScroll: 1
    }
 
+   
+
   return (
     <div className='Dante'>
       < Navbar />
@@ -38,6 +40,8 @@ function Login() {
       </div>
     </Slider>
       </div>
+
+    
   )
 }
 

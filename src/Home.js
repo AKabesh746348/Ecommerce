@@ -6,8 +6,18 @@ import Dante from "./Images/Dante.jpg"
 import { MdAddLocationAlt } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 import Header from './Common/Header';
+import Cart from './Cart';
 
 function Home() {
+
+
+  let numbers = [1,2,3,4,5]
+  console.log(numbers);
+  
+  let newnumbers = [...numbers , 6 , 7 , 8]
+  console.log(newnumbers);
+
+  let Obj = {name : "greens" , stack : "frontend"}
 
    const[num , setNum] = useState(0)
    const handleIncreament =() =>{
@@ -29,9 +39,21 @@ function Home() {
 
     }
 
+    const [data , setdata ] = useState(false)
+
+     const [bckcolor , setbckcolor] = useState(false)
+
+    const handleData = () =>{
+      setdata(!data)
+    }
+
+      const handlebckcolor = () =>{
+        setbckcolor(!bckcolor)
+      }
+
 
   return (
-    <div>
+    <div className={ bckcolor ? "lightmode" : "darkmode"}>
       
   <Header/>
 
@@ -64,6 +86,15 @@ function Home() {
 
       <FaInstagram  className='insta'/>
 
+      <h1>{Obj.stack}</h1>
+
+      <Cart name="World"/>
+
+      <h1>{ data ? "user is valid " : "user is not valid"}</h1>
+
+      <button onClick={handleData}>Change</button>
+
+      <button onClick={handlebckcolor}>Change theme</button>
     </div>
   )
 }

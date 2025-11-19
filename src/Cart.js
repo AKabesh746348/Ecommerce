@@ -1,8 +1,11 @@
 import React from 'react'
 
-function Cart() {
+function Cart(props) {
   return (
-    <div>Cart</div>
+    <div>
+      <h1>Hello {props.name} </h1>
+
+    </div>
   )
 }
 
